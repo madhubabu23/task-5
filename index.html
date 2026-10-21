@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <meta name="description" content="Wanderly is a small single-page travel planner demo.">
+    <title>Wanderly — Find your somewhere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#/home" aria-label="Wanderly home">
+        <span class="brand-mark" aria-hidden="true">w.</span>
+        <span>wanderly</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#/home" data-route="home">Discover</a>
+        <a href="#/destinations" data-route="destinations">Destinations</a>
+        <a href="#/planner" data-route="planner">My planner <span class="nav-count" id="planner-count">0</span></a>
+        <a href="#/about" data-route="about">Our story</a>
+      </nav>
+      <a class="header-cta" href="#/destinations">Plan a trip <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="app" tabindex="-1" aria-live="polite" aria-busy="false"></main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#/home"><span class="brand-mark" aria-hidden="true">w.</span><span>wanderly</span></a>
+      <p>A little inspiration for your next somewhere.</p>
+      <span>Made for curious people <span aria-hidden="true">✳</span></span>
+    </footer>
+    <div class="sr-only" id="announcer" role="status" aria-live="polite"></div>
+  </body>
+</html>
